@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倫理まとめ - ポータル</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="background">
+    <!-- <div class="header">
+        <div class="header-container">
+            <div class="header-center">倫理</div>
+        </div>
+    </div>
+    <div class="homepage-container">
+        <div class="data-number-box">登録数：<span id="data-number">174</span>人</div>
+        <div class="selection-container">
+            <a href="mode1.html" class="mode-button">
+                キーワード → 人名
+            </a>
+            <a href="mode2.html" class="mode-button">
+                人名 → キーワード
+            </a>
+            <a href="game.html" class="mode-button">
+                キーワードクイズ
+            </a>
+        </div>
+    </div> -->
+    <div class="portal-container">
+        <h1>公共・倫理 対策アプリ</h1>
+        <div id="data-status" style="margin-bottom: 20px; color: #666; font-size: 0.9em;">
+            登録中：<span id="total-people">--</span> 人
+        </div>
+        <p>学習するモードを選んでください</p>
+
+        <div class="menu-grid">
+            <a href="anki.html" class="menu-card">
+                <h2>🗂️ 暗記モード</h2>
+                <p>人物名を見てキーワードを思い出す</p>
+            </a>
+            <a href="quiz.html?mode=normal" class="menu-card">
+                <h2>❓ 通常クイズ</h2>
+                <p>全キーワードからランダムに出題</p>
+            </a>
+
+            <a href="quiz.html?mode=quote" class="menu-card">
+                <h2>💬 名言クイズ</h2>
+                <p>「 」の言葉から人物を当てる</p>
+            </a>
+
+            <a href="quiz.html?mode=book" class="menu-card">
+                <h2>📚 著作クイズ</h2>
+                <p>『 』の作品名から人物を当てる</p>
+            </a>
+        </div>
+    </div>
+    <script>
+    // index.html でも人数把握のためにJSONを読み込む
+    fetch('js/person.json')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('total-people').innerText = data.person.length;
+        })
+        .catch(err => console.error("データ取得エラー:", err));
+</script>
+</body>
+</html>

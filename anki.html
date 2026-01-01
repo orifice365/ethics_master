@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倫理まとめ - 暗記モード</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/anki.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">＜</a>
+        <h1>暗記モード</h1>
+        
+        <div class="filters">
+            <button onclick="displayData('all')">すべて</button>
+            <button onclick="displayData('源流思想')">源流</button>
+            <button onclick="displayData('日本思想')">日本</button>
+            <button onclick="displayData('西洋近現代思想')">西洋</button>
+            <button onclick="displayData('現代社会・心理')">現代・心理</button>
+            <hr>
+            <button onclick="shuffleData()" style="background-color: #e8f4fd;">シャッフル</button>
+            <button onclick="displayWeakOnly()" style="background-color: #fff0f0;">苦手のみ表示</button>
+        </div>
+    </header>
+
+    <main id="card-container"></main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倫理まとめ - クイズ</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">＜</a>
+        <h1>クイズモード</h1>
+        <div id="streak-container" style="background: #fff8e1; display: inline-block; padding: 5px 15px; border-radius: 20px; border: 1px solid #ffc107;">
+        <span id="streak-count" style="font-weight: bold; color: #f57c00; font-size: 1.2em;">0</span> 問連続正解中！
+        </div>
+    </header>
+
+    <main id="quiz-container">
+        <div id="question-area">
+            <p class="question-title">この人物は誰？<span id="hint-counter" style="color: #666; font-size: 0.9em;"></span></p>
+            <div id="keywords-box"></div>
+            <button id="hint-btn" onclick="showNextHint()">+ 次のヒントを出す</button>
+        </div>
+
+        <div id="choices-area" class="choices-grid"></div>
+        
+        <div id="result-message"></div>
+        <button id="next-btn" style="display:none;" onclick="nextQuestion()">次の問題へ</button>
+    </main>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
