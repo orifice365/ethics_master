@@ -86,15 +86,6 @@
     width: 100%;
 }
 
-#next-btn{
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #f0f2f5;
-}
-
 /* 不正解ボタンのスタイル */
 .choice-btn-incorrect {
     background-color: #ffdde0 !important; /* 薄い赤 */
@@ -105,9 +96,9 @@
 
 /* 正解ボタンのスタイル */
 .choice-btn-correct {
-    background-color: #e0f0ff !important; /* 薄い青 */
-    border: 2px solid #3498db !important;
-    color: #004080 !important;
+    background-color: #d1f2d1 !important; /* 薄い青 */
+    border: 2px solid #4caf50 !important;
+    color: #008040 !important;
 
 }
 

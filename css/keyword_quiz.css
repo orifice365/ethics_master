@@ -1,0 +1,97 @@
+/* quiz-container内の調整 */
+#choices-area {
+    gap: 10px;
+    padding: 10px;
+}
+
+/* 選択された時の色の変化をよりハッキリさせる */
+.menu-card:disabled {
+    cursor: default;
+    transform: none !important;
+    opacity: 1;
+    /* disabledでも色はハッキリ見せる */
+}
+
+/* 画像のレイアウトを再現するための専用スタイル */
+#game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding: 0 20px;
+}
+
+/* 中央の人物名カード */
+#person-display-card {
+    width: 100%;
+    max-width: 500px;
+    height: 216px;
+    /* aspect-ratio: 16 / 9; */
+    /* 横長カード */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    background: #fff;
+    cursor: default;
+    border-radius: 24px;
+    border: solid 1px #eee;
+}
+
+/* キーワード群のコンテナ（中央に密集させる） */
+#keyword-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+/* 個別のキーワードボタン（これまでのデザインを継承） */
+.keyword-choice {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    background: #fff;
+    transition: all 0.2s;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.keyword-choice:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 最下部のボタンエリア */
+#footer-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+/* 正解・不正解の色指定 */
+.keyword-choice.correct-mark {
+    background-color: #d1f2d1 !important;
+    /* 画像の薄緑 */
+    /* border-color: #4caf50 !important; */
+    box-shadow: none;
+
+    &:hover{
+        transform: none;
+    }
+}
+
+.keyword-choice.wrong-mark {
+    background-color: #f2d1d1 !important;
+    /* 画像の赤 */
+    /* border-color: #f44336 !important; */
+    box-shadow: none;
+
+    &:hover{
+        transform: none;
+    }
+}

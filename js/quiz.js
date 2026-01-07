@@ -155,14 +155,14 @@ function checkAnswer(selectedName) {
     // メッセージの表示（ユーザー様の指定色：正解=青、不正解=赤を維持）
     if (isCorrect) {
         streak++; // 正解ならカウントアップ
-        resultMsg.innerHTML = `<span style="color:blue; font-size:2em;">正解！</span>`;
+        resultMsg.innerHTML = `<span style="color:green; font-size:2em;">正解！</span>`;
     } else {
         streak = 0; // 間違えたら0にリセット
         resultMsg.innerHTML = `<span style="color:red; font-size:2em;">不正解……</span><br><span>正解は：<b>${currentQuestion.name}</b></span>`;
     }
 
     // 画面の連勝表示を更新
-    streakDisplay.innerText = streak;
+    // streakDisplay.innerText = streak;
 
     // 「次の問題へ」ボタンを表示
     document.getElementById('next-btn').style.display = 'block';

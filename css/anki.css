@@ -55,6 +55,11 @@
     font-size: 1.2em;
 }
 
+.card h3 span {
+    font-size: 1rem;
+    color: #555;
+}
+
 .keywords {
     display: none;
     margin-top: 16px;

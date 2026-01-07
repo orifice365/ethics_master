@@ -50,7 +50,7 @@ function displayData(category, dataToDisplay = null) {
                     onchange="toggleWeak('${person.name}')">
                 <span></span>
             </label>
-            <h3>${person.name}</h3>
+            <h3>${person.name} <span>(${person.keywords.length})</span></h3>
             <div class="keywords">
                 ${person.keywords.map(k => `・ ${k}`).join('<br>')}
             </div>
