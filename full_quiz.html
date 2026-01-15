@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倫理まとめ - 一周モード</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">＜</a>
+        <h1 id="mode-title">一周クイズ</h1>
+        <div id="progress-container" style="margin-bottom: 10px; font-size: 1.1em; color: #555;">
+            進捗: <span id="current-pos">0</span> / <span id="total-pos">0</span> 人目
+        </div>
+    </header>
+
+    <main id="quiz-container">
+        <div id="question-area">
+            <p class="question-title">この人物は誰？<span id="hint-counter" style="color: #666; font-size: 0.9em;"></span></p>
+            <div id="keywords-box"></div>
+            <button id="hint-btn" onclick="showNextHint()">次のヒントを出す</button>
+        </div>
+        <div id="choices-area" class="menu-grid"></div>
+        <div id="result-message"></div>
+        <button id="next-btn" style="display:none;" onclick="nextQuestion()">次の問題へ</button>
+    </main>
+    <script src="js/full_quiz.js"></script>
+</body>
+</html>
